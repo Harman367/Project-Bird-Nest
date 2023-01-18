@@ -23,7 +23,7 @@ function createItem(intruder) {
 		<p>Email: ${intruder.email}</p>
 
         <!--Last update-->
-		<p>Last updated at: ${intruder.lastUpdateFormatted}</p>
+		<p>Last updated at: ${intruder.lastUpdate}</p>
 	`;
   return item;
 }

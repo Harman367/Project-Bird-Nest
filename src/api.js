@@ -1,10 +1,10 @@
 //Imports
 import fetch from "node-fetch";
-import { format } from "date-fns";
+import { formatInTimeZone } from "date-fns-tz";
 import { XMLParser } from "fast-xml-parser";
 import CyclicDb from "@cyclic.sh/dynamodb";
 
-const db = CyclicDb("kind-hare-glassesCyclicDB");
+const db = CyclicDb(process.env.DYNAMODB_TABLE);
 
 //Setup
 const TEN_MINUTES = 1000 * 60 * 10;
@@ -52,15 +52,19 @@ export async function getIntruders() {
       const pilot = await getPilot(serialNumber);
 
       //Insert newest data.
-      const lastUpdate = Date.now() + 7200000; //Host timezone is 2 hours behind.
-      const lastUpdateFormatted = format(lastUpdate, "HH:mm:ss");
+      //const lastUpdate = Date.now() + 7200000; //Host timezone is 2 hours behind.
+      const lastUpdate = formatInTimeZone(
+        new Date(),
+        "Europe/Helsinki",
+        "HH:mm:ss"
+      );
       const distance = Math.round(distanceToNest(x, y) / 1000);
 
       const updatedData = {
         serialNumber,
         distance,
         ...pilot,
-        lastUpdateFormatted,
+        lastUpdate,
       };
 
       //Insert data into db.
