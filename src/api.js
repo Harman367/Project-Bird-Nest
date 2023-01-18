@@ -4,8 +4,8 @@ import dateTz from "date-fns-tz";
 import { XMLParser } from "fast-xml-parser";
 import CyclicDb from "@cyclic.sh/dynamodb";
 
-const { formatInTimeZone } = dateTz //
-const db = CyclicDb(process.env.DYNAMODB_TABLE);
+const { formatInTimeZone } = dateTz; //
+const db = CyclicDb(process.env.CYCLIC_DB);
 
 //Setup
 const TEN_MINUTES = 1000 * 60 * 10;
