@@ -1,9 +1,10 @@
 //Imports
 import fetch from "node-fetch";
-import { formatInTimeZone } from "date-fns-tz";
+import dateTz from "date-fns-tz";
 import { XMLParser } from "fast-xml-parser";
 import CyclicDb from "@cyclic.sh/dynamodb";
 
+const { formatInTimeZone } = dateTz //
 const db = CyclicDb(process.env.DYNAMODB_TABLE);
 
 //Setup
