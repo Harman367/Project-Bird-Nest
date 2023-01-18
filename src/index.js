@@ -36,4 +36,4 @@ app.get("/api/intruders", async (_, res) => {
 });
 
 //Listen on port.
-app.listen(app.get("port"), () => console.log(`Listening...`));
+app.listen(app.get("port"), () => console.log(`Listening... http://localhost:${app.get("port")}`));

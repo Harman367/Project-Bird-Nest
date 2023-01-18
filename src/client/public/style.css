@@ -5,51 +5,37 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
-  padding-left: 10%;
-  padding-right: 10%;
-  padding-top: 5%;
+  padding-top: 1rem;
+}
+
+.CoverImage {
+	background: url('https://assignments.reaktor.com/birdnest/img/birdnest11.webp') no-repeat center;
+	opacity: 0.1;
+	inset: 0;
+	position: fixed;
+	z-index: -1;
+}
+
+
+.Header {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.Intruders {
+  display: grid;
+	grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+	max-width: 1280px;
+	margin-inline: auto;
 }
 
 .Intruder__Serial {
-  background-color: rgb(0 0 0 / 7%);
+	background-color: #ededed;
   border-radius: 0.25rem;
   font-size: 1rem;
   margin: 0;
   padding: 0.5rem;
   user-select: none;
-}
-
-h3 {
   text-align: center;
-}
-
-h2 {
-  text-align: center;
-  padding-bottom: 5%;
-}
-
-#list {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 3%;
-  row-gap: 1vh;
-}
-
-#list > div {
-  flex-grow: 1;
-  flex-basis: 30%;
-}
-
-img {
-  opacity: 0.1;
-  position: fixed;
-  height: 100%;
-  top: 0;
-  bottom: 0;
-}
-
-div.center {
-  display: flex;
-  justify-content: center;
 }

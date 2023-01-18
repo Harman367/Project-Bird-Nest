@@ -11,7 +11,7 @@ function createItem(intruder) {
 		<h3 class="Intruder__Serial">Serial Number: ${intruder.serialNumber}</h3>
 
         <!--Closest Distance-->
-		<p>Closet Distance: ${intruder.distance} meters</p>
+		<p>Closest Distance: ${intruder.distance} meters</p>
 
         <!--Name-->
 		<p><strong>Name: ${intruder.firstName} ${intruder.lastName}</strong></p>
