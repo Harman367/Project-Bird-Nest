@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 5%;
+}
+
+.Intruder__Serial {
+  background-color: rgb(0 0 0 / 7%);
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0.5rem;
+  user-select: none;
+}
+
+h3 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  padding-bottom: 5%;
+}
+
+#list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 3%;
+  row-gap: 1vh;
+}
+
+#list > div {
+  flex-grow: 1;
+  flex-basis: 30%;
+}
+
+img {
+  opacity: 0.1;
+  position: fixed;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+}
+
+div.center {
+  display: flex;
+  justify-content: center;
+}
